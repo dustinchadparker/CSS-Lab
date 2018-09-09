@@ -19,9 +19,6 @@ cells.forEach(function (cell) {
 
 });
 
-
-
-
 function cellClicked(e) {
 
     /* Reset game on click if winner is found or draw. */
@@ -128,5 +125,3 @@ function checkDraw() {
         winnerFound = true;
     }
 };
-
-
