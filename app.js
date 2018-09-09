@@ -69,13 +69,29 @@ function checkWinnerX() {
         } else if (topMiddleCell.textContent == "X" && topRightCell.textContent == "X") {
             WinnerFound(1);
         }
-    } else if (bottomLeftCell.textContent == "X" &&
+    } 
+    
+    if (bottomLeftCell.textContent == "X" &&
         bottomMiddleCell.textContent == "X" &&
         bottomRightCell.textContent == "X") {
         WinnerFound(1);
-    } else if (bottomRightCell.textContent == "X"
+    } 
+    
+    if (bottomRightCell.textContent == "X"
         && middleRightCell.textContent == "X"
         && topRightCell.textContent == "X") {
+        WinnerFound(1);
+    } 
+    
+    if (bottomMiddleCell.textContent == "X" &&
+        centerCell.textContent == "X" &&
+        topMiddleCell.textContent == "X") {
+        WinnerFound(1);
+    }
+
+    if (centerCell.textContent == "X" &&
+    middleLeftCell.textContent == "X" &&
+    middleRightCell.textContent == "X") {
         WinnerFound(1);
     }
 };
@@ -90,13 +106,29 @@ function checkWinnerO() {
         } else if (topMiddleCell.textContent == "O" && topRightCell.textContent == "O") {
             WinnerFound(2);
         }
-    } else if (bottomLeftCell.textContent == "O" &&
+    } 
+    
+    if (bottomLeftCell.textContent == "O" &&
         bottomMiddleCell.textContent == "O" &&
         bottomRightCell.textContent == "O") {
         WinnerFound(2);
-    } else if (bottomRightCell.textContent == "O"
+    } 
+    
+    if (bottomRightCell.textContent == "O"
         && middleRightCell.textContent == "O"
         && topRightCell.textContent == "O") {
+        WinnerFound(2);
+    } 
+    
+    if (bottomMiddleCell.textContent == "O" &&
+        centerCell.textContent == "O" &&
+        topMiddleCell.textContent == "O") {
+        WinnerFound(2);
+    }
+
+    if (centerCell.textContent == "O" &&
+    middleLeftCell.textContent == "O" &&
+    middleRightCell.textContent == "O") {
         WinnerFound(2);
     }
 };
