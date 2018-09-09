@@ -33,9 +33,13 @@ function cellClicked(e) {
         } else {
             /* Place an X or an O based on your "turn" */
             if (ticOrTac % 2 == 0) {
+                decision.style.color = "blue"; 
+                e.target.style.color = "red";
                 decision.textContent = "Player 2 Turn!";
                 e.target.textContent = "X";
             } else {
+                decision.style.color = "red"; 
+                e.target.style.color = "blue";
                 e.target.textContent = "O";
                 decision.textContent = "Player 1 Turn!";
             }
@@ -136,8 +140,10 @@ function checkWinnerO() {
 /* Declares winner and initiates board reset. */
 function WinnerFound(a) {
     if (a == 1) {
+        decision.style.color = "red"; 
         decision.textContent = "Winner: Player 1!";
     } else if (a == 2) {
+        decision.style.color = "blue"; 
         decision.textContent = "Winner: Player 2!";
     }
     winnerFound = true;
@@ -153,6 +159,7 @@ function checkDraw() {
     });
 
     if (count == 9) {
+        decision.style.color = "orange"; 
         decision.textContent = "DRAW!";
         winnerFound = true;
     }
